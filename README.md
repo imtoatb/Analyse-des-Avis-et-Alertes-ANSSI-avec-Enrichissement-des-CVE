@@ -46,7 +46,7 @@ Python 3.11.9
 ## Installation
 
 
-### Etape 1: Installation
+### Etape 1 : Installation
 
 ```bash
 # Cloner le projet
@@ -66,22 +66,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Etape 2: Lancer Jupyter Notebook
+### Etape 2 : Lancer Jupyter Notebook
 ```bash
 
 jupyter notebook
 ```
 
-### Etape 3: Executer les notebooks dans l'ordre
-|Ordre|	Notebook|	
-|-----|---------|
-|1 | analyse_anssi.ipynb|	
-|2 | visualisation_anssi.ipynb|
-|3 | ml_anssi.ipynb	Modeles de|
 
-
-
-### Etape 4: Utilisation du cache local (optionnel mais recommande)
+### Etape 3 : Utilisation du cache local (optionnel mais recommande)
 
 Pour eviter de surcharger les API, le projet peut utiliser des fichiers locaux:
 
