@@ -65,23 +65,23 @@ source venv/bin/activate
 # Installer les dependances
 pip install -r requirements.txt
 ```
+### Etape 2: Modifier (si necessaire) les différentes variables du fichier App.py
 
-### Etape 2: Lancer Jupyter Notebook
+1. Le Rate_limit (initialisé à 0.5 pour aller plus vite)
+
+2. Les Mails des Destinataires 
+
+
+### Etape 3: Lancer App.py
 ```bash
 
-jupyter notebook
+App.py
 ```
+### Etape 5: Attendre entre 10 et 20 min et recevoir son mail
 
-### Etape 3: Executer les notebooks dans l'ordre
-|Ordre|	Notebook|	
-|-----|---------|
-|1 | analyse_anssi.ipynb|	
-|2 | visualisation_anssi.ipynb|
-|3 | ml_anssi.ipynb	Modeles de|
+Les requêtes peuvent prendre plusieurs minutes à se finir. 
 
-
-
-### Etape 4: Utilisation du cache local (optionnel mais recommande)
+### Etape 4: Utilisation du cache local (optionnel mais recommande pour tester le projet)
 
 Pour eviter de surcharger les API, le projet peut utiliser des fichiers locaux:
 
