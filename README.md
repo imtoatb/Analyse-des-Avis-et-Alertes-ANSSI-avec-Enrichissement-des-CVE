@@ -65,15 +65,23 @@ source venv/bin/activate
 # Installer les dependances
 pip install -r requirements.txt
 ```
+### Etape 2: Modifier (si necessaire) les différentes variables du fichier App.py
 
-### Etape 2 : Lancer Jupyter Notebook
+1. Le Rate_limit (initialisé à 0.5 pour aller plus vite)
+
+2. Les Mails des Destinataires 
+
+
+### Etape 3: Lancer App.py
 ```bash
 
-jupyter notebook
+App.py
 ```
+### Etape 5: Attendre entre 10 et 20 min et recevoir son mail
 
+Les requêtes peuvent prendre plusieurs minutes à se finir. 
 
-### Etape 3 : Utilisation du cache local (optionnel mais recommande)
+### Etape 4: Utilisation du cache local (optionnel mais recommande pour tester le projet)
 
 Pour eviter de surcharger les API, le projet peut utiliser des fichiers locaux:
 
@@ -85,7 +93,9 @@ import json
 with open("cache/mitre/CVE-2026-42897.json", "r") as f:
     data = json.load(f)
 ```
+### Etape 5: Attendre entre 10 et 20 min et recevoir son mail
 
+Les requêtes peuvent prendre plusieurs minutes à se finir. 
 
 
 
