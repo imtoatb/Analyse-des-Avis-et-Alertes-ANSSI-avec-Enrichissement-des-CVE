@@ -10,10 +10,10 @@ En France, l'ANSSI (Agence Nationale de la Securite des Systemes d'Information) 
 
 Ce projet a pour objectif de:
 
-- Extraireautomatiquement les donnees des flux RSS des avis et alertes ANSSI
-- Identifierles CVE (Common Vulnerabilities and Exposures) mentionnees dans les bulletins
+- Extraire automatiquement les donnees des flux RSS des avis et alertes ANSSI
+- Identifier les CVE (Common Vulnerabilities and Exposures) mentionnees dans les bulletins
 - Enrichir les CVE avec des informations complementaires via les API externes (MITRE pour CVSS/CWE, FIRST pour EPSS)
-- Consoliderles donnees dans un DataFrame Pandas exploitable
+- Consolider les donnees dans un DataFrame Pandas exploitable
 - Analyser et visualiserles vulnerabilites pour en tirer des conclusions exploitables
 - Predire la criticite des vulnerabilites via des modeles de Machine Learning
 - Generer des alertes personnalisees pour les produits affectes
@@ -67,26 +67,31 @@ pip install -r requirements.txt
 ```
 ### Etape 2: Modifier (si necessaire) les différentes variables du fichier App.py
 
-1. Le Rate_limit (initialisé à 0.5 pour aller plus vite)
+1. Le Rate_limit (initialisé à 0.1 pour aller plus vite)
 
 2. Les Mails des Destinataires 
+(Par défaut, il va s'agir de mail d'exemple ("destinataire@gmail.com") et ne va donc pas envoyer de mail, cependant il va afficher le mail qu'il aurait du envoyer )
+
+3. Les differents seuils, initialisé à : 
+- SEUIL_CVSS_CRITIQUE = 9.0
+- SEUIL_CVSS_ELEVE = 7.0
+- SEUIL_EPSS = 0.60
 
 
 ### Etape 3: Lancer App.py
 ```bash
+#MacOS/Linux
+python3 App.py
 
-App.py
+#Windows
+python App.py
 ```
-### Etape 5: Attendre entre 10 et 20 min et recevoir son mail
-
-Les requêtes peuvent prendre plusieurs minutes à se finir. 
 
 ### Etape 4: Utilisation du cache local (optionnel mais recommande pour tester le projet)
 
 Pour eviter de surcharger les API, le projet peut utiliser des fichiers locaux:
 
 ```python
-
 import json
 
 # Charger depuis le cache
